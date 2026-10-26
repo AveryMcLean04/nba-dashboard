@@ -17,3 +17,7 @@ print("Columns with missing values:")
 print(missing[missing > 0])
 
 print(df.groupby("SEASON").size().to_string())
+
+no3 = df[df["FG3A"] == 0]
+print("Players with 0 three-point attempts:", len(no3))
+print(no3["FG3_PCT"].value_counts().head())
